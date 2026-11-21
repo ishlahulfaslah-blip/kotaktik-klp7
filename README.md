@@ -3,8 +3,8 @@ Website KOTAKTIK – Penyedia Konsumsi Kotak Kegiatan Kampus
 
 ### Strategi Kenyang Tanpa Drama.
 
-**Kelompok:** 7
-**Kelas:** WebDev C
+**Kelompok:** 7  
+**Kelas:** WebDev C  
 **Mata Kuliah:** Pengembangan Web (Web Development)
 
 ## Tema Bisnis
