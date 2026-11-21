@@ -3,31 +3,44 @@ Website KOTAKTIK – Penyedia Konsumsi Kotak Kegiatan Kampus
 
 ### Strategi Kenyang Tanpa Drama.
 
-**Kelompok:** 7  
-**Kelas:** WebDev C  
+**Kelompok:** 7
+**Kelas:** WebDev C
 **Mata Kuliah:** Pengembangan Web (Web Development)
 
-## Tentang KOTAKTIK
-
-KOTAKTIK merupakan bisnis penyedia konsumsi kotak
-untuk berbagai kegiatan mahasiswa dan acara kampus.
-KOTAKTIK menawarkan pilihan menu dengan harga
-bersahabat, menu variatif, serta pemesanan praktis
-sesuai kebutuhan kegiatan.
-
 ## Tema Bisnis
-
 Dapur Terpusat Penyedia Konsumsi Kotak
 untuk Kegiatan Mahasiswa.
 
-## Katalog Produk
+## Fokus Industri
+Ritel Cerdas, Layanan Kuliner Digital,
+dan Kebutuhan Harian.
 
+## Tentang KOTAKTIK
+KOTAKTIK merupakan bisnis penyedia konsumsi
+kotak untuk berbagai kegiatan mahasiswa dan
+acara kampus. KOTAKTIK menawarkan pilihan
+menu dengan harga bersahabat, menu variatif,
+serta pemesanan praktis sesuai kebutuhan acara.
+
+## Target Konsumen
+- Mahasiswa
+- Organisasi kemahasiswaan
+- Kepanitiaan kegiatan kampus
+- Unit Kegiatan Mahasiswa (UKM)
+
+## Produk dan Layanan
+Penyediaan konsumsi kotak untuk:
+- Rapat organisasi mahasiswa.
+- Seminar dan workshop.
+- Kegiatan akademik.
+- Berbagai acara kampus.
+
+## Katalog Produk
 1. TIK Hemat – Rp15.000/porsi
 2. TIK Komplit – Rp25.000/porsi
 3. TIK Kehormatan – Rp35.000/porsi
 
 ## Website
-
 **Link GitHub Pages:**
 Akan diperbarui setelah website dipublikasikan.
 
