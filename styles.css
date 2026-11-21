@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap");
+
+/* =========================================================
+   UI/UX 1 - Warna, huruf, jarak antarbagian, tata letak responsif
+   ========================================================= */
+
+/* ---------- Warna merek, ukuran jarak ---------- */
+:root {
+  --bg: #fdf5e6;
+  --green: #1e4d2b;
+  --green-dark: #153a20;
+  --orange: #f26522;
+  --orange-dark: #d94f10;
+  --yellow: #fcd34d;
+  --yellow-soft: #fde9a8;
+  --red: #d9381e;
+  --purple: #7b2d8e;
+  --text: #24331f;
+  --muted: #5b6b57;
+  --white: #ffffff;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 40px;
+}
+
+/* ---------- Dasar halaman: latar belakang, huruf ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1, h2, h3, h4 { line-height: 1.2; font-weight: 900; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+/* ---------- Header (CEO) ---------- */
+#header-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--bg);
+}
+#header-section h1,
+#header-section .brand,
+#header-section .logo { font-size: 1.6rem; font-weight: 900; color: var(--green); }
+#header-section nav,
+#header-section ul { display: flex; gap: var(--space-3); }
+#header-section a {
+  font-weight: 700;
+  padding-bottom: 4px;
+  border-bottom: 3px solid transparent;
+  transition: border-color .2s, color .2s;
+}
+#header-section a:hover { border-color: var(--orange); color: var(--green); }
+
+/* ---------- Hero (PM 1) ---------- */
+#hero-section {
+  padding: var(--space-4) var(--space-3) 80px;
+  color: var(--white);
+  background: var(--green);
+  border-radius: 0 0 50% 50% / 0 0 48px 48px;
+}
+.hero-content { max-width: 1100px; margin: 0 auto; }
+
+.hero-tagline {
+  display: inline-block;
+  margin-bottom: var(--space-2);
+  padding: 4px 14px;
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .5px;
+  color: var(--green);
+  background: var(--yellow);
+  border-radius: 999px;
+}
+#hero-section h1 { max-width: 16ch; font-size: 3rem; margin-bottom: var(--space-2); }
+.hero-description { max-width: 60ch; font-size: 1.05rem; margin-bottom: var(--space-3); }
+
+.hero-benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+  max-width: 800px;
+  margin-bottom: var(--space-3);
+}
+.hero-benefits li {
+  padding: var(--space-1) var(--space-2);
+  background: rgba(255, 255, 255, .08);
+  border-left: 4px solid var(--yellow);
+  border-radius: 12px;
+}
+.benefit-title { font-weight: 800; color: var(--yellow); }
+.benefit-description { font-size: .9rem; opacity: .9; }
+
+.hero-cta {
+  display: inline-block;
+  padding: 14px 28px;
+  font-weight: 800;
+  color: var(--white);
+  background: var(--orange);
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .25);
+  transition: background-color .2s, transform .1s;
+}
+.hero-cta:hover { background: var(--orange-dark); }
+.hero-cta:active { transform: scale(.97); }
+
+/* ---------- Katalog (PM 2): jarak dan tata letak Grid ---------- */
+#catalog-section { padding: var(--space-4) var(--space-3); }
+.catalog-container { max-width: 1100px; margin: 0 auto; }
+
+.catalog-heading { text-align: center; margin-bottom: var(--space-3); }
+.catalog-label {
+  display: inline-block;
+  margin-bottom: var(--space-1);
+  padding: 4px 14px;
+  font-size: .8rem;
+  font-weight: 800;
+  color: var(--green);
+  background: var(--yellow-soft);
+  border-radius: 999px;
+}
+.catalog-heading h2 { font-size: 2rem; color: var(--green); margin-bottom: var(--space-1); }
+
+/* Berjajar 3 kolom di komputer */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  align-items: stretch;
+}
+
+/* ---------- Footer (CEO) ---------- */
+#footer-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  padding: var(--space-4) var(--space-4) var(--space-3);
+  color: var(--white);
+  background: var(--green);
+  border-radius: 50% 50% 0 0 / 40px 40px 0 0;
+}
+#footer-section a:hover { color: var(--yellow); }
+
+/* ---------- Responsif: komputer -> tablet -> ponsel ---------- */
+@media (max-width: 900px) {
+  #hero-section h1 { font-size: 2.2rem; }
+  .hero-benefits { grid-template-columns: 1fr; }
+  .catalog-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  #header-section { padding: var(--space-2); justify-content: center; }
+  #hero-section { padding: var(--space-3) var(--space-2) 56px; }
+  #hero-section h1 { font-size: 1.8rem; }
+  #catalog-section { padding: var(--space-3) var(--space-2); }
+  .catalog-grid { grid-template-columns: 1fr; } /* menumpuk di ponsel */
+  #footer-section { flex-direction: column; text-align: center; padding: var(--space-3) var(--space-2); }
+}
+
+/* =========================================================
+   UI/UX 2 - Kartu katalog, formulir kalkulator, sudut melengkung,
+   bayangan lembut, efek tombol saat disentuh kursor
+   (memakai warna dari variabel :root milik UI/UX 1)
+   ========================================================= */
+
+/* ---------- Kartu katalog ---------- */
+.package-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--white);
+  border: 2px solid #b9d9b0;
+  border-radius: 24px;
+  box-shadow: 0 6px 18px rgba(30, 77, 43, .12);
+  transition: transform .2s, box-shadow .2s;
+}
+.package-card:hover { transform: translateY(-4px); box-shadow: 0 12px 26px rgba(30, 77, 43, .2); }
+
+.package-image { position: relative; }
+.package-image img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.package-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 14px;
+  font-size: .8rem;
+  font-weight: 800;
+  color: var(--white);
+  background: var(--green);
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+}
+.package-tag.favorite { background: var(--orange); }
+.package-tag.premium { background: var(--purple); }
+
+.package-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--space-1);
+  padding: var(--space-3);
+}
+.package-content h3 { font-size: 1.2rem; color: var(--green); }
+.package-description { font-size: .95rem; color: var(--muted); }
+.package-price { font-size: 1.8rem; font-weight: 900; color: var(--green); }
+.package-price span { font-size: 1rem; font-weight: 600; color: var(--muted); }
+.package-divider { height: 0; border-top: 2px dashed #cfe3c8; margin: 4px 0; }
+.package-content h4 { font-size: .95rem; }
+.package-features li { font-size: .95rem; margin-bottom: 2px; }
+.package-features li::before { content: "✔ "; color: var(--green); font-weight: 900; }
+.package-button { margin-top: auto; width: 100%; background: var(--green); border-radius: 14px; }
+.package-button:hover { background: var(--orange); }
+
+/* Kartu 2 (favorit) berwarna oranye, kartu 3 (premium) berwarna ungu */
+.package-featured .package-features li::before { color: var(--orange); }
+.package-featured .package-divider { border-top-color: #f5b88f; }
+.package-card:nth-child(3) .package-features li::before { color: var(--purple); }
+.package-card:nth-child(3) .package-divider { border-top-color: #d9bce0; }
+.package-featured { background: #ffe9d2; border-color: var(--orange); }
+.package-featured .package-price,
+.package-featured h3 { color: var(--orange); }
+.package-card:nth-child(3) { background: #f7ecf8; border-color: #c9a2d1; }
+.package-card:nth-child(3) .package-price,
+.package-card:nth-child(3) h3 { color: var(--purple); }
+
+/* ---------- Banner promo ---------- */
+.catalog-promo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  color: var(--white);
+  background: var(--red);
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(217, 56, 30, .25);
+}
+.promo-icon {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--red);
+  background: var(--yellow);
+  border-radius: 50%;
+}
+.promo-information { flex: 1; }
+.promo-information h3 { font-size: 1.2rem; }
+.promo-information small { display: block; opacity: .9; }
+.promo-code {
+  padding: 10px 18px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border: 2px dashed var(--white);
+  border-radius: 12px;
+}
+
+/* ---------- Formulir kalkulator (SE 1) ---------- */
+#calc-section {
+  width: calc(100% - 2 * var(--space-3));
+  max-width: 720px;
+  margin: var(--space-4) auto;
+  padding: var(--space-3);
+  background: var(--yellow-soft);
+  border-radius: 24px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+}
+#calc-section h2 { font-size: 1.6rem; color: var(--green); margin-bottom: var(--space-1); }
+#calc-section > p { margin-bottom: var(--space-2); }
+#calc-section br { display: none; }
+#calc-section > div { margin-bottom: var(--space-2); }
+#calc-section label { display: block; font-weight: 700; margin-bottom: 4px; }
+#calc-section select,
+#calc-section input {
+  width: 100%;
+  padding: 12px 14px;
+  font: inherit;
+  color: var(--text);
+  background: var(--white);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  transition: border-color .2s, box-shadow .2s;
+}
+#calc-section select:focus,
+#calc-section input:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(30, 77, 43, .2);
+}
+#calc-section > button { width: 100%; background: var(--green); border-radius: 14px; }
+#calc-section > button:hover { background: var(--orange); }
+
+#result {
+  margin-top: var(--space-2);
+  padding: var(--space-3);
+  font-weight: 700;
+  background: var(--white);
+  border-radius: 16px;
+}
+#result p { margin: 0; padding: 4px 0; }
+
+/* ---------- Tombol umum: berubah warna saat disentuh kursor ---------- */
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  font: inherit;
+  font-weight: 800;
+  color: var(--white);
+  background: var(--orange);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color .2s, transform .1s;
+}
+button:hover { background: var(--orange-dark); }
+button:active { transform: scale(.97); }
+button:focus-visible { outline: 3px solid var(--yellow); outline-offset: 2px; }
+
+/* ---------- Responsif untuk komponen UI/UX 2 ---------- */
+@media (max-width: 600px) {
+  .catalog-promo { flex-direction: column; text-align: center; }
+  #calc-section { padding: var(--space-2); }
+}
