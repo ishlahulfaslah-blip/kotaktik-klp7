@@ -36,9 +36,9 @@ Penyediaan konsumsi kotak untuk:
 - Berbagai acara kampus.
 
 ## Katalog Produk
-1. TIK Hemat – Rp15.000/porsi
-2. TIK Komplit – Rp25.000/porsi
-3. TIK Kehormatan – Rp35.000/porsi
+1. PAKET HEMAT MAHASISWA – Rp15.000/porsi
+2. PAKET KONSUMSI SEMINAR – Rp25.000/porsi
+3. PAKET JAMUAN TAMU UNDANGAN – Rp35.000/porsi
 
 ## Website
 **Link GitHub Pages:**
